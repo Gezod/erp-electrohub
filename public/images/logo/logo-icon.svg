@@ -1,0 +1,11 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="48" height="48" rx="12" fill="#0A0A0A"/>
+  <!-- Outer circuit frame -->
+  <path d="M24 10L36 17V31L24 38L12 31V17L24 10Z" stroke="#38BDF8" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Tech E letterform circuit lines -->
+  <path d="M18 19H30M18 24H27M18 29H30" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Tech node pulse dots -->
+  <circle cx="30" cy="19" r="1.5" fill="#38BDF8"/>
+  <circle cx="27" cy="24" r="1.5" fill="#38BDF8"/>
+  <circle cx="30" cy="29" r="1.5" fill="#38BDF8"/>
+</svg>

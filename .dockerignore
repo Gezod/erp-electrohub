@@ -1,0 +1,16 @@
+node_modules
+npm-debug.log*
+
+
+.git
+.github
+.vscode
+
+dist
+dist-ssr
+coverage
+
+*.local
+*.log
+
+git_status.txt
