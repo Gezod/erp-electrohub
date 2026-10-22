@@ -22,9 +22,7 @@
       </div>
 
       <!-- Right: Actions & User -->
-      <div class="flex items-center gap-3 shrink-0">
-        <ThemeToggler />
-      </div>
+      <div class="flex items-center gap-3 shrink-0"></div>
     </div>
   </header>
 </template>
@@ -33,7 +31,6 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { useSidebar } from '@/composables/useSidebar'
-import ThemeToggler from '../common/ThemeToggler.vue'
 import { Menu, X } from 'lucide-vue-next'
 
 const { toggleSidebar, toggleMobileSidebar, isMobileOpen } = useSidebar()

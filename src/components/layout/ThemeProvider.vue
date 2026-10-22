@@ -5,32 +5,24 @@
 <script setup lang="ts">
 import { ref, provide, onMounted, computed } from 'vue'
 
-type Theme = 'light' | 'dark'
+type Theme = 'light'
 
 const theme = ref<Theme>('light')
 
-const isDarkMode = computed(() => theme.value === 'dark')
+const isDarkMode = computed(() => false)
 
-const applyTheme = (t: Theme) => {
-  theme.value = t
-  if (t === 'dark') {
-    document.documentElement.classList.add('dark')
-  } else {
-    document.documentElement.classList.remove('dark')
-  }
-  localStorage.setItem('theme', t)
+const applyTheme = () => {
+  theme.value = 'light'
+  document.documentElement.classList.remove('dark')
+  localStorage.setItem('theme', 'light')
 }
 
 const toggleTheme = () => {
-  const nextTheme: Theme = theme.value === 'dark' ? 'light' : 'dark'
-  applyTheme(nextTheme)
+  applyTheme()
 }
 
 onMounted(() => {
-  const saved = localStorage.getItem('theme') as Theme | null
-  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-  const initialTheme: Theme = saved === 'dark' || (!saved && prefersDark) ? 'dark' : 'light'
-  applyTheme(initialTheme)
+  applyTheme()
 })
 
 provide('theme', {

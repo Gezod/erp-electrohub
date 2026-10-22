@@ -25,15 +25,7 @@
               src="/images/logo/logo.svg"
               alt="ElectroHub Logo"
               :class="[
-                'shrink-0 transition-all duration-200 ease-out dark:hidden',
-                isExpanded || isMobileOpen ? 'w-[92px]' : 'w-[40px]'
-              ]"
-            />
-            <img
-              src="/images/logo/logo-dark.svg"
-              alt="ElectroHub Logo"
-              :class="[
-                'shrink-0 transition-all duration-200 ease-out hidden dark:block',
+                'shrink-0 transition-all duration-200 ease-out',
                 isExpanded || isMobileOpen ? 'w-[92px]' : 'w-[40px]'
               ]"
             />
